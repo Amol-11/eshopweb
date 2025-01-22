@@ -14,7 +14,7 @@ stages:
   - job: Build
     pool:
       name: mytest
-      demands: amol
+      demands: Agent.name -equals amol
     steps:
     - task: DotNetCoreCLI@2
       displayName: Restore
